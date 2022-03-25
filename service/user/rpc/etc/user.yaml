@@ -1,0 +1,21 @@
+Name: user.rpc
+ListenOn: 127.0.0.1:9000
+DevMode: true
+
+Etcd:
+  Hosts:
+    - etcd:2379
+  Key: user.rpc
+
+DataSource: "root:root@tcp(mysql:3306)/mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+
+Cache:
+  - Host: redis:6379
+    Type: node
+
+Salt: HWVOFkGgPTryzICwd7qnJaZR9KQ2i8xe
+
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9090
+  Path: /metrics

@@ -1,0 +1,26 @@
+Name: order.rpc
+ListenOn: 127.0.0.1:9002
+
+Etcd:
+  Hosts:
+  - etcd:2379
+  Key: order.rpc
+
+DataSource: root:root@tcp(mysql:3306)/mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
+Cache:
+  - Host: redis:6379
+    Type: node # node可以不写，可以设为cluster
+    # Pass: xxx # 如果有密码
+
+UserRpc:
+  Etcd:
+    Hosts:
+    - etcd:2379
+    Key: user.rpc
+
+ProductRpc:
+  Etcd:
+    Hosts:
+    - etcd:2379
+    Key: product.rpc
