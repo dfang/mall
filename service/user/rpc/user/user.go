@@ -6,7 +6,7 @@ package user
 import (
 	"context"
 
-	"mall/service/user/rpc/pb/user"
+	"github.com/dfang/mall/service/user/rpc/pb/user"
 
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"

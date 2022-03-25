@@ -10,3 +10,66 @@ cd user
 goctl model mysql ddl -src ./model/user.sql -dir ./model -c
 goctl api go -api ./api/user.api -dir ./api
 goctl rpc protoc rpc/user.proto --go_out=./rpc/pb --go-grpc_out=./rpc/pb --zrpc_out=rpc/
+
+goctl docker --go user.go --port 8000
+
+cd ~/go-zero-demo/mall/service/product/api
+go mod init github.com/dfang/mall/service/product/api
+go mod tidy
+cd ~/go-zero-demo/mall/service/product/rpc
+go mod init github.com/dfang/mall/service/pay/rpc
+go mod tidy
+
+cd ~/go-zero-demo/mall/service/user/api
+go mod init github.com/dfang/mall/service/user/api
+go mod tidy
+cd ~/go-zero-demo/mall/service/user/rpc
+go mod init github.com/dfang/mall/service/pay/rpc
+go mod tidy
+
+
+cd ~/go-zero-demo/mall/service/order/api
+go mod init github.com/dfang/mall/service/order/api
+go mod tidy
+cd ~/go-zero-demo/mall/service/order/rpc
+go mod init github.com/dfang/mall/service/order/rpc
+go mod tidy
+
+cd ~/go-zero-demo/mall/service/pay/api
+go mod init github.com/dfang/mall/service/pay/api
+go mod tidy
+cd ~/go-zero-demo/mall/service/pay/rpc
+go mod init github.com/dfang/mall/service/pay/rpc
+go mod tidy
+
+
+find . -name captain.yml -execdir captain build \;
+find . -name captain.yml -execdir sh -c "captain build; captain push" \;
+
+```
+ λ  tree -L 2 service/
+service/
+├── order
+│   ├── api
+│   ├── captain.yml
+│   ├── model
+│   └── rpc
+├── pay
+│   ├── api
+│   ├── captain.yml
+│   ├── model
+│   └── rpc
+├── product
+│   ├── api
+│   ├── captain.yml
+│   ├── model
+│   └── rpc
+└── user
+    ├── api
+    ├── captain.yml
+    ├── model
+    └── rpc
+
+# 进入每个RPC目录执行go mod tidy
+λ find . -type d -iname rpc -execdir sh -c "cd {}; go mod tidy" \;
+```

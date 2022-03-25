@@ -1,10 +1,10 @@
 package svc
 
 import (
-	"mall/service/order/rpc/order"
-	"mall/service/pay/model"
-	"mall/service/pay/rpc/internal/config"
-	"mall/service/user/rpc/user"
+	"github.com/dfang/mall/service/order/rpc/order"
+	"github.com/dfang/mall/service/pay/model"
+	"github.com/dfang/mall/service/pay/rpc/internal/config"
+	"github.com/dfang/mall/service/user/rpc/user"
 
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 	"github.com/zeromicro/go-zero/zrpc"

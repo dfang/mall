@@ -3,9 +3,9 @@ package logic
 import (
 	"context"
 
-	"mall/service/product/model"
-	"mall/service/product/rpc/internal/svc"
-	"mall/service/product/rpc/pb/product"
+	"github.com/dfang/mall/service/product/model"
+	"github.com/dfang/mall/service/product/rpc/internal/svc"
+	"github.com/dfang/mall/service/product/rpc/pb/product"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"google.golang.org/grpc/status"

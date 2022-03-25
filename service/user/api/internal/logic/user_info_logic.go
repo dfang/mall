@@ -4,9 +4,9 @@ import (
 	"context"
 	"encoding/json"
 
-	"mall/service/user/api/internal/svc"
-	"mall/service/user/api/internal/types"
-	"mall/service/user/rpc/user"
+	"github.com/dfang/mall/service/user/api/internal/svc"
+	"github.com/dfang/mall/service/user/api/internal/types"
+	"github.com/dfang/mall/service/user/rpc/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

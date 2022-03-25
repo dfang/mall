@@ -3,9 +3,9 @@ package logic
 import (
 	"context"
 
-	"mall/service/pay/api/internal/svc"
-	"mall/service/pay/api/internal/types"
-	"mall/service/pay/rpc/pay"
+	"github.com/dfang/mall/service/pay/api/internal/svc"
+	"github.com/dfang/mall/service/pay/api/internal/types"
+	"github.com/dfang/mall/service/pay/rpc/pay"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

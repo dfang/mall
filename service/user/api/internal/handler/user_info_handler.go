@@ -3,8 +3,8 @@ package handler
 import (
 	"net/http"
 
-	"mall/service/user/api/internal/logic"
-	"mall/service/user/api/internal/svc"
+	"github.com/dfang/mall/service/user/api/internal/logic"
+	"github.com/dfang/mall/service/user/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest/httpx"
 )

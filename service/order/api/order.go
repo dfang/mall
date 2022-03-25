@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"mall/service/order/api/internal/config"
-	"mall/service/order/api/internal/handler"
-	"mall/service/order/api/internal/svc"
+	"github.com/dfang/mall/service/order/api/internal/config"
+	"github.com/dfang/mall/service/order/api/internal/handler"
+	"github.com/dfang/mall/service/order/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"

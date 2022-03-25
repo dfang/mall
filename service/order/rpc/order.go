@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"mall/service/order/rpc/internal/config"
-	"mall/service/order/rpc/internal/server"
-	"mall/service/order/rpc/internal/svc"
-	"mall/service/order/rpc/order"
+	"github.com/dfang/mall/service/order/rpc/internal/config"
+	"github.com/dfang/mall/service/order/rpc/internal/server"
+	"github.com/dfang/mall/service/order/rpc/internal/svc"
+	"github.com/dfang/mall/service/order/rpc/order"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"

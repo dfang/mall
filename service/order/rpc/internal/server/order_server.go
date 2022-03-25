@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	"mall/service/order/rpc/internal/logic"
-	"mall/service/order/rpc/internal/svc"
-	"mall/service/order/rpc/order"
+	"github.com/dfang/mall/service/order/rpc/internal/logic"
+	"github.com/dfang/mall/service/order/rpc/internal/svc"
+	"github.com/dfang/mall/service/order/rpc/order"
 )
 
 type OrderServer struct {

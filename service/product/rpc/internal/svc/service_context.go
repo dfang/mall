@@ -1,8 +1,8 @@
 package svc
 
 import (
-	"mall/service/product/model"
-	"mall/service/product/rpc/internal/config"
+	"github.com/dfang/mall/service/product/model"
+	"github.com/dfang/mall/service/product/rpc/internal/config"
 
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 )

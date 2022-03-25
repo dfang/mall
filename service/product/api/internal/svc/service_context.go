@@ -1,8 +1,8 @@
 package svc
 
 import (
-	"mall/service/product/api/internal/config"
-	"mall/service/product/rpc/product"
+	"github.com/dfang/mall/service/product/api/internal/config"
+	"github.com/dfang/mall/service/product/rpc/product"
 
 	"github.com/zeromicro/go-zero/zrpc"
 )

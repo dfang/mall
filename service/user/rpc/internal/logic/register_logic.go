@@ -3,10 +3,11 @@ package logic
 import (
 	"context"
 
-	"mall/common/cryptx"
-	"mall/service/user/model"
-	"mall/service/user/rpc/internal/svc"
-	"mall/service/user/rpc/pb/user"
+	"github.com/dfang/mall/common/cryptx"
+
+	"github.com/dfang/mall/service/user/model"
+	"github.com/dfang/mall/service/user/rpc/internal/svc"
+	"github.com/dfang/mall/service/user/rpc/pb/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"google.golang.org/grpc/status"

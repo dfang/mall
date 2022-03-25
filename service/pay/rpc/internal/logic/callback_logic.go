@@ -3,11 +3,11 @@ package logic
 import (
 	"context"
 
-	"mall/service/order/rpc/order"
-	"mall/service/pay/model"
-	"mall/service/pay/rpc/internal/svc"
-	"mall/service/pay/rpc/pay"
-	"mall/service/user/rpc/user"
+	"github.com/dfang/mall/service/order/rpc/order"
+	"github.com/dfang/mall/service/pay/model"
+	"github.com/dfang/mall/service/pay/rpc/internal/svc"
+	"github.com/dfang/mall/service/pay/rpc/pay"
+	"github.com/dfang/mall/service/user/rpc/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"google.golang.org/grpc/status"
