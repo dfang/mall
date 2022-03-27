@@ -29,9 +29,9 @@ jobs:
         # tags: ${{ github.sha }}, ${{ steps.docker_meta.outputs.tags }}, latest
         tags: latest, ${{ github.sha }}
         registry: docker.io
-        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        dockerfile: service/product/api/Dockerfile
         directory: service/product/api
 
     - uses: mr-smithers-excellent/docker-build-push@v5
@@ -42,4 +42,5 @@ jobs:
         registry: ghcr.io
         username: dfang
         password: ${{ secrets.GHCR_TOKEN }}
+        dockerfile: service/product/api/Dockerfile
         directory: service/product/api
