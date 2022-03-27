@@ -1,6 +1,9 @@
 Name: Order
 Host: 0.0.0.0
 Port: 8002
+Mode: dev
+Log:
+  Level: info
 
 DataSource: root:root@tcp(mysql:3306)/mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 
