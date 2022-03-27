@@ -1,0 +1,45 @@
+name: "pay-api"
+
+on:
+  push:
+    paths:
+      - "service/pay/api/**"
+      - ".github/workflows/pay.yaml"
+
+jobs:
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+
+  #     - name: Run tests
+  #       run: |-
+  #         cd routes/pay
+  #         go test ./...
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: build & push to DockerHub
+      with:
+        image: dfang/mall-pay-api
+        # tags: ${{ github.sha }}, ${{ steps.docker_meta.outputs.tags }}, latest
+        tags: latest, ${{ github.sha }}
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        directory: service/pay/api
+
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: build & push to ghcr.io
+      with:
+        image: dfang/mall-pay-api
+        tags: latest, ${{ github.sha }}
+        registry: ghcr.io
+        username: dfang
+        password: ${{ secrets.GHCR_TOKEN }}
+        directory: service/pay/api
