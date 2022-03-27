@@ -1,5 +1,7 @@
 Name: order.rpc
 ListenOn: 127.0.0.1:9002
+Log:
+  Level: info
 
 Etcd:
   Hosts:

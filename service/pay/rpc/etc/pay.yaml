@@ -1,5 +1,8 @@
 Name: pay.rpc
 ListenOn: 127.0.0.1:9003
+Log:
+  Level: info
+
 Etcd:
   Hosts:
   - etcd:2379

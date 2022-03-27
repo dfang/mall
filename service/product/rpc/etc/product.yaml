@@ -1,5 +1,8 @@
 Name: product.rpc
 ListenOn: 127.0.0.1:9001
+Log:
+  Level: info
+
 Etcd:
   Hosts:
     - etcd:2379

@@ -1,6 +1,6 @@
 Name: user.rpc
 ListenOn: 127.0.0.1:9000
-Mode: dev
+# Mode: dev
 Log:
   Level: info
 
