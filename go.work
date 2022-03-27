@@ -1,0 +1,10 @@
+go 1.18
+
+use ./service/user/rpc
+use ./service/user/api
+use ./service/product/rpc
+use ./service/product/api
+use ./service/order/rpc
+use ./service/order/api
+use ./service/pay/rpc
+use ./service/pay/api
