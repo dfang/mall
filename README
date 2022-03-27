@@ -27,7 +27,6 @@ cd ~/go-zero-demo/mall/service/user/rpc
 go mod init github.com/dfang/mall/service/pay/rpc
 go mod tidy
 
-
 cd ~/go-zero-demo/mall/service/order/api
 go mod init github.com/dfang/mall/service/order/api
 go mod tidy
@@ -41,6 +40,16 @@ go mod tidy
 cd ~/go-zero-demo/mall/service/pay/rpc
 go mod init github.com/dfang/mall/service/pay/rpc
 go mod tidy
+
+gsed -i 's/search/replace/gI' input.txt
+
+# only find word ‘love’ and replace it with ‘sick’ if line content a specific string such as FOO:
+sed -i -e '/FOO/s/love/sick/' input.txt
+
+etcdctl get "" --prefix --keys-only
+etcdctl --endpoints etcd:2379 get "" --prefix --keys-only
+
+unset all proxy on local
 
 
 find . -name captain.yml -execdir captain build \;
@@ -72,4 +81,10 @@ service/
 
 # 进入每个RPC目录执行go mod tidy
 λ find . -type d -iname rpc -execdir sh -c "cd {}; go mod tidy" \;
+
+cd service
+find . -name go.mod -execdir bash -c "go mod tidy" \;
+
+find . -iname .gitignore -execdir bash -c "cat {}; echo" \;
+find . -iname .gitignore -execdir bash -c "git add {}" \;
 ```

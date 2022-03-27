@@ -3,6 +3,7 @@ module github.com/dfang/mall/service/user/api
 go 1.17
 
 require (
+	github.com/dfang/mall v0.0.0-20220325064407-01c67efa6dbd
 	github.com/dfang/mall/service/user/rpc v0.0.0-20220325085147-0f334888246e
 	github.com/zeromicro/go-zero v1.3.1
 )
@@ -18,6 +19,7 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-redis/redis/v8 v8.11.4 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang-jwt/jwt/v4 v4.2.0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect

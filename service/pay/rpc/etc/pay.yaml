@@ -5,7 +5,10 @@ Etcd:
   - etcd:2379
   Key: pay.rpc
 
-DataSource: root:root@tcp(mysql:3306)/mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+Log:
+  Level: info
+
+DataSource: "root:root@tcp(mysql:3306)/mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
 
 Cache:
 - Host: redis:6379
@@ -13,12 +16,14 @@ Cache:
 
 
 UserRpc:
+  NonBlock: false
   Etcd:
     Hosts:
     - etcd:2379
     Key: user.rpc
 
 OrderRpc:
+  NonBlock: false
   Etcd:
     Hosts:
     - etcd:2379
