@@ -1,0 +1,7 @@
+product-rpc:
+  build: rpc/Dockerfile
+  image: dfang/mall-product-rpc
+
+product-api:
+  build: api/Dockerfile
+  image: dfang/mall-product-api

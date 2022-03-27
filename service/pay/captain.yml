@@ -1,0 +1,7 @@
+pay-rpc:
+  build: rpc/Dockerfile
+  image: dfang/mall-pay-rpc
+
+pay-api:
+  build: api/Dockerfile
+  image: dfang/mall-pay-api

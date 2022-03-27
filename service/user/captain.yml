@@ -1,0 +1,7 @@
+user-rpc:
+  build: rpc/Dockerfile
+  image: dfang/mall-user-rpc
+
+user-api:
+  build: api/Dockerfile
+  image: dfang/mall-user-api

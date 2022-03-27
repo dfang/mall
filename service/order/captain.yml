@@ -1,0 +1,7 @@
+order-rpc:
+  build: rpc/Dockerfile
+  image: dfang/mall-order-rpc
+
+order-api:
+  build: api/Dockerfile
+  image: dfang/mall-order-api
